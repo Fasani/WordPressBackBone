@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Michael Fasani</title>
+  <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+
+  <div id="main">
+    <ul id="blog-list"></ul>
+  </div>
+
+  <script type="text/template" id="single-excerpt">
+    <div id="post-<%= attributes.id %>">
+      <!--<p><%= attributes.type %></p>-->
+      <!--<p><%= attributes.slug %></p>
+      <!--<p><%= attributes.url %></p>
+      <!--<p><%= attributes.status %></p>-->
+      <p><%= attributes.title %></p>
+      <!--<p><%= attributes.title_plain %></p>-->
+      <!--<p><%= attributes.content %></p>-->
+      <p><%= attributes.excerpt %></p>
+      <p>Date: <%= attributes.date %></p>
+      <!--<p><%= attributes.modified %></p>-->
+      <p><%= attributes.categories %></p>
+      <p><%= attributes.tags %></p>
+      <p><%= attributes.author %></p>
+      <p><%= attributes.comments %></p>
+      <!--<p><%= attributes.attachments %></p>-->
+      <p>Comments: <%= attributes.comment_count %></p>
+      <!--<p><%= attributes.comment_status %></p>-->
+      <!--<p><%= attributes.custom_fields %></p>-->
+    </div>
+  </script>
+
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+
+  <script type="text/javascript" src="js/models/blogItem.js"></script>
+  <script type="text/javascript" src="js/collections/blogList.js"></script>
+  <script type="text/javascript" src="js/views/mainView.js"></script>
+  <script type="text/javascript" src="js/views/blogListView.js"></script>
+  <script type="text/javascript" src="js/viewsingle/blogSingleView.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    var mainView = new MainView();
+  });
+  </script>
+
+</body>
+</html>

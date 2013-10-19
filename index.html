@@ -10,9 +10,33 @@
 
   <div id="main">
     <ul id="post-list"></ul>
+    <div id="content"></div>
   </div>
 
+  <script type="text/template" id="single-excerpt">
+    <div id="excerpt-<%= id %>">
+      <h1><%= title_plain %></h1>
+      <%= excerpt %>
+      <p>Date: <%= date %></p>
+      <div class="meta">
+        <% if (categories.length > 0) { %>
+          <span class="categories"><%= categories %></span>
+        <% } %>
+        <% if (tags.length > 0) { %>
+        <span class="tags"><%= tags %></span>
+        <% } %>
+        <% if (author.name.length > 0) { %>
+        <span class="author"><%= author.name %></span>
+        <% } %>
+        <% if (comment_count > 0) { %>
+          <span class="comments"><%= comment_count %></span>
+        <% } %>
+      </div>
+    </div>
+  </script>
+
   <script type="text/template" id="single-post">
+
     <div id="post-<%= id %>">
       <!--<p><%= type %></p>-->
       <!--<p><%= slug %></p>
@@ -20,8 +44,8 @@
       <!--<p><%= status %></p>-->
       <h1><%= title %></h1>
       <!--<p><%= title_plain %></p>-->
-      <!--<p><%= content %></p>-->
-      <p><%= excerpt %></p>
+      <p><%= content %></p>
+      <!--<p><%= excerpt %></p>-->
       <p>Date: <%= date %></p>
       <!--<p><%= modified %></p>-->
       <p><%= categories %></p>
@@ -42,8 +66,10 @@
   <script type="text/javascript" src="js/models/postItem.js"></script>
   <script type="text/javascript" src="js/collections/postList.js"></script>
   <script type="text/javascript" src="js/views/mainView.js"></script>
-  <script type="text/javascript" src="js/views/postListView.js"></script>
+  <script type="text/javascript" src="js/views/excerptListView.js"></script>
+  <script type="text/javascript" src="js/viewsingle/excerptSingleView.js"></script>
   <script type="text/javascript" src="js/viewsingle/postSingleView.js"></script>
+  <script type="text/javascript" src="js/routes.js"></script>
 
   <script type="text/javascript">
   $(document).ready(function() {

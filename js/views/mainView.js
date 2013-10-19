@@ -11,9 +11,13 @@ var MainView = Backbone.View.extend({
 		//Collection
 		var postList = new PostList();
 
-		this.postListView = new PostListView({
-			collection: postList
-		});
+		this.excerptListView = new ExcerptListView({
+      collection: postList
+    });
+
+    this.postSingleView = new PostSingleView({
+      collection: postList
+    });
 
 		return this;
 	}

@@ -1,4 +1,4 @@
-var PostListView = Backbone.View.extend({
+var ExcerptListView = Backbone.View.extend({
 
 	el: '#post-list',
 
@@ -18,7 +18,7 @@ var PostListView = Backbone.View.extend({
 	},
 
 	addOne: function(singleExcerpt) {
-		var view = new PostSingleView({
+		var view = new ExcerptSingleView({
 			model: singleExcerpt.attributes
 		});
 		this.$el.append(view.render().el);

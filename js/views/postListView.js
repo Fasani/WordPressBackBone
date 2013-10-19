@@ -1,6 +1,6 @@
-var BlogListView = Backbone.View.extend({
+var PostListView = Backbone.View.extend({
 
-	el: '#blog-list',
+	el: '#post-list',
 
   events: {
     "click .single-excerpt" : "changePage"
@@ -18,8 +18,8 @@ var BlogListView = Backbone.View.extend({
 	},
 
 	addOne: function(singleExcerpt) {
-		var view = new BlogSingleView({
-			model: singleExcerpt
+		var view = new PostSingleView({
+			model: singleExcerpt.attributes
 		});
 		this.$el.append(view.render().el);
 	},

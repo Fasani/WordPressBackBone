@@ -9,10 +9,10 @@ var MainView = Backbone.View.extend({
 	render: function() {
 
 		//Collection
-		var blogList = new BlogList();
+		var postList = new PostList();
 
-		this.blogListView = new BlogListView({
-			collection: blogList
+		this.postListView = new PostListView({
+			collection: postList
 		});
 
 		return this;

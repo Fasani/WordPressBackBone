@@ -1,6 +1,6 @@
-var BlogList = Backbone.Collection.extend({
+var PostList = Backbone.Collection.extend({
 
-  model: BlogItem,
+  model: PostItem,
   url: 'http://blog.michaelfasani.com/api/get_posts/',
 
   parse: function (data) {

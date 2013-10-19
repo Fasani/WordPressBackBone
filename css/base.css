@@ -3,13 +3,15 @@
 	margin: 0;
 	outline: 0;
 	padding: 0;
-	font-size: 12px;
-	font-family: verdana;
+	font-size: 14px;
 }
 
 html, body {
   height: 100%;
   width: 100%;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  background: grey;
 }
 
 #main {
@@ -23,14 +25,20 @@ html, body {
 }
 
 h1 {
-	font-size: 14px;
+	font-size: 16px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
 }
 
-#blog-list {
+#post-list {
   float: left;
-  width: 200px;}
+  width: 400px;
+  background-color:rgba(255,255,255,0.5);
+  padding: 20px;
+  list-style: none;
+}
 
-.single-excerpt {
+.single-post {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid grey;

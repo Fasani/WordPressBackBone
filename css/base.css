@@ -3,13 +3,14 @@
 	margin: 0;
 	outline: 0;
 	padding: 0;
-	font-size: 12px;
+	font-size: 14px;
+  line-height: 1.5em;
 }
 
 html, body {
   height: 100%;
   width: 100%;
-  font-family: Verdana;
+  font-family: Tahoma;
   background: url(http://farm5.staticflickr.com/4037/4342953620_a103ce7b6e_o.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -19,69 +20,64 @@ html, body {
 
 #main {
 	overflow: hidden;
-	margin: 20px;
+	padding: 20px;
 }
 
 h1 {
   font-size: 26px;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
+  margin-bottom: 5px;
 }
 
 h2 {
-  font-size: 14px;
+  font-size: 18px;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
+  margin-bottom: 5px;
+}
+
+a {
+  color: black;
+  font-weight: bold;
 }
 
 p {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 #post-list {
   float: left;
   width: 300px;
-  background-color:rgba(255,255,255,0.90);
-  padding: 20px;
   list-style: none;
-  -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    0px 0px 10px rgba(50, 50, 50, 0.75);
-  box-shadow:         0px 0px 10px rgba(50, 50, 50, 0.75);
 }
 
 #post-list h1 {
-  font-size: 16px;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 #post-list p {
-  margin: 0;
+  margin-bottom: 5px;
   font-size: 10px;
 }
 
-#content {
-  float: left;
-  background-color:rgba(255,255,255,0.90);
-  padding: 20px;
-  list-style: none;
-  margin-left: 20px;
-  width: 600px;
+#post-list .single-excerpt {
+  margin-bottom: 20px;
+  padding: 16px 20px;
+  cursor: pointer;
+  background-color:   rgba(255,255,255,0.90);
   -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
   -moz-box-shadow:    0px 0px 10px rgba(50, 50, 50, 0.75);
   box-shadow:         0px 0px 10px rgba(50, 50, 50, 0.75);
 }
 
-.single-excerpt {
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid grey;
-}
-
-.meta {
+#post-list .meta {
   overflow: hidden;
   margin-top: 5px;
 }
 
-.meta span {
+#post-list .meta span {
   padding-left: 20px;
   margin-right: 10px;
   height: 16px;
@@ -90,18 +86,29 @@ p {
   padding-top: 2px;
 }
 
-span.categories {
+#post-list .meta span.categories {
   background: url(../img/categories.png) no-repeat top left;
 }
 
-span.author {
+#post-list .meta span.author {
   background: url(../img/author.png) no-repeat top left;
 }
 
-span.comments {
+#post-list .meta span.comments {
   background: url(../img/comment.png) no-repeat top left;
 }
 
-span.tags {
+#post-list .meta span.tags {
   background: url(../img/tags.png) no-repeat top left;
+}
+
+#content {
+  float: left;
+  padding: 16px 20px;
+  margin-left: 20px;
+  width: 600px;
+  background-color:rgba(255,255,255,0.90);
+  -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 0px 10px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 0px 10px rgba(50, 50, 50, 0.75);
 }

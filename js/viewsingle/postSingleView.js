@@ -5,13 +5,22 @@ var PostSingleView = Backbone.View.extend({
 
 	template: _.template($('#single-post').html()),
 
-	render: function() {
-    console.log('this: ', this);
-		this.$el.html(this.template(this.collection.models[1].attributes));
-		return this;
-	},
+  render: function() {
+    this.$el.html(this.template(this.collection.models[2].attributes));
+    return this;
+  },
 
   initialize: function() {
     this.listenTo(this.collection, 'sync', this.render);
+    this.listenTo(this.options.dispatcher, 'changePage', this.changePage);
+  },
+
+  amaze: function() {
+    console.log('this: ', 'noshit');
+  },
+
+  changePage: function(myModel) {
+    this.$el.html(this.template(myModel));
+    return this;
   }
 });

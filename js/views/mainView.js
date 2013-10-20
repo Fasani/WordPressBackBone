@@ -8,15 +8,20 @@ var MainView = Backbone.View.extend({
 
 	render: function() {
 
+    //Easy Events Dispatcher
+    var dispatcher = _.clone(Backbone.Events);
+
 		//Collection
 		var postList = new PostList();
 
-		this.excerptListView = new ExcerptListView({
-      collection: postList
+    this.excerptListView = new ExcerptListView({
+      collection: postList,
+      dispatcher: dispatcher
     });
 
     this.postSingleView = new PostSingleView({
-      collection: postList
+      collection: postList,
+      dispatcher: dispatcher
     });
 
 		return this;

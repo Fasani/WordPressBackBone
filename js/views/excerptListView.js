@@ -1,10 +1,6 @@
 var ExcerptListView = Backbone.View.extend({
 
 	el: '#post-list',
-
-  events: {
-    "click .single-excerpt" : "changePage"
-  },
 	
 	initialize: function() {
 		this.listenTo(this.collection, 'sync', this.render);
@@ -19,13 +15,10 @@ var ExcerptListView = Backbone.View.extend({
 
 	addOne: function(singleExcerpt) {
 		var view = new ExcerptSingleView({
-			model: singleExcerpt.attributes
+			model: singleExcerpt.attributes,
+      dispatcher: this.options.dispatcher
 		});
 		this.$el.append(view.render().el);
-	},
-
-  changePage: function() {
-    console.log('chnagepage: ', 'yep');
-  }
+	}
 
 });

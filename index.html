@@ -5,6 +5,7 @@
   <title>Michael Fasani</title>
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/rainbowlinenumbers.css">
   <link rel="stylesheet" href="css/rainbow/themes/monokai.css">
 </head>
 <body>
@@ -21,14 +22,25 @@
       <p>Date: <%= date %></p>
       <div class="meta">
         <% if (categories.length > 0) { %>
-          <span class="categories"><%= categories %></span>
+          <span class="categories">
+            <% for (key in categories) { %>
+              <%= categories[key].title %>
+            <% } %>
+          </span>
         <% } %>
+        
         <% if (tags.length > 0) { %>
-        <span class="tags"><%= tags %></span>
+          <span class="tags">
+            <% for (key in tags) { %>
+              <%= tags[key].title %><% if (key != (tags.length-1)) { %>,<% } %>
+            <% } %>
+          </span>
         <% } %>
+<!--
         <% if (author.name.length > 0) { %>
-        <span class="author"><%= author.name %></span>
+          <span class="author"><%= author.name %></span>
         <% } %>
+-->
         <% if (comment_count > 0) { %>
           <span class="comments"><%= comment_count %></span>
         <% } %>
@@ -51,13 +63,37 @@
       <!--<p><%= excerpt %></p>-->
       <p>Date: <%= date %></p>
       <!--<p><%= modified %></p>-->
-      <p><%= categories %></p>
-      <p><%= tags %></p>
-      <p><%= author %></p>
-      <p><%= comments %></p>
-      <!--<p><%= attachments %></p>-->
+     
+        <% if (categories.length > 0) { %>
+          <p class="categories">
+          Posted in: 
+            <% for (key in categories) { %>
+              <%= categories[key].title %>
+            <% } %>
+          </p>
+        <% } %>
+
+        <% if (tags.length > 0) { %>
+          <p class="tags">
+          Posted in: 
+            <% for (key in tags) { %>
+              <%= tags[key].title %>, 
+            <% } %>
+          </p>
+        <% } %>
+
+        <% if (author.nickname.length > 0) { %>
+          <p><%= author.nickname %></p>
+        <% } %>
+
+
+        <% if (comment_status == "open") { %>
+              <a href="#">You can post a comment</a>
+        <% } %>
+
+      <p><%= attachments %></p>
       <p>Comments: <%= comment_count %></p>
-      <!--<p><%= comment_status %></p>-->
+      <p><%= comments %></p>
       <!--<p><%= custom_fields %></p>-->
     </div>
   </script>
@@ -69,6 +105,8 @@
   <script type="text/javascript"  src="js/libs/rainbow.min.js"></script>
   <script type="text/javascript"  src="js/libs/language/generic.js"></script>
   <script type="text/javascript"  src="js/libs/language/javascript.js"></script>
+
+<script type="text/javascript"  src="js/libs/rainbow.linenumbers.min.js"></script>
 
   <script type="text/javascript" src="js/models/postItem.js"></script>
   <script type="text/javascript" src="js/collections/postList.js"></script>

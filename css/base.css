@@ -113,17 +113,13 @@ p {
   box-shadow:         0px 0px 10px rgba(50, 50, 50, 0.75);
 }
 
-#content {
-
-}
-
-
 #content code {
   font-size: 12px;
-  padding: 5px;
+  padding: 0px;
 }
 
 #content pre {
+  padding: 2px;
   -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
   -moz-box-shadow:    0px 0px 10px rgba(50, 50, 50, 0.75);
   box-shadow:         0px 0px 10px rgba(50, 50, 50, 0.75);

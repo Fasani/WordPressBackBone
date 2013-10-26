@@ -7,7 +7,8 @@ var PostSingleView = Backbone.View.extend({
 
   render: function() {
     this.$el.html(this.template(this.collection.models[0].attributes));
-    prettyPrint();
+    this.$el.find('code').attr('data-language', 'javascript');
+    Rainbow.color()
     return this;
   },
 

@@ -1,11 +1,11 @@
 /**
- * Blackboard theme
+ * Monokai theme
  *
- * Adapted from Domenico Carbotta's TextMate theme of the same name
+ * Adapted from Wimer Hazenberg's TextMate theme of the same name
  *
- * @author Domenico Carbotta
- * @author Craig Campbell
- * @version 1.0.2
+ * @author Wimer Hazenberg
+ * @author Michael Fasani
+ * @version 1.0.0
  */
 pre {
     background: #272822;

@@ -43,7 +43,7 @@ a {
 }
 
 p {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 #post-list {
@@ -111,4 +111,27 @@ p {
   -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
   -moz-box-shadow:    0px 0px 10px rgba(50, 50, 50, 0.75);
   box-shadow:         0px 0px 10px rgba(50, 50, 50, 0.75);
+}
+
+#content {
+
+}
+
+
+#content code {
+  background-color:rgba(0, 0, 0, 0.85);
+  -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 0px 10px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 0px 10px rgba(50, 50, 50, 0.75);
+  margin: 0 0 20px 0;
+  padding: 15px 20px;
+  display: block;
+  font-size: 12px;
+  color: #fff;
+}
+
+#content p code {
+  display: inline-block;
+  padding: 0 5px;
+  margin: 0;
 }

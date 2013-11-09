@@ -28,6 +28,8 @@ var ExcerptSingleView = Backbone.View.extend({
 
   changePage: function() {
     Dispatcher.trigger('changePage', this.model);
+    $(".active").removeClass("active");
+    this.$el.addClass("active");
   }
 
 });

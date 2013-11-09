@@ -7,7 +7,7 @@ define([
   //App Files
   'app/Dispatcher',
   //Templates
-  'text!app/templates/template.html'
+  'text!app/templates/single-excerpt.html'
 ], function($, _, Backbone, Dispatcher, templateHTML){
 
 var ExcerptSingleView = Backbone.View.extend({
@@ -19,7 +19,7 @@ var ExcerptSingleView = Backbone.View.extend({
     "click" : "changePage"
   },
 
-	template: _.template($('#single-excerpt').html()),
+	template: _.template(templateHTML),
 
 	render: function() {
 		this.$el.html(this.template(this.model));

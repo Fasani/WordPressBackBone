@@ -1,0 +1,45 @@
+<div id="post-<%= id %>">
+<!--<p><%= type %></p>-->
+<!--<p><%= slug %></p>
+<!--<p><%= url %></p>
+<!--<p><%= status %></p>-->
+<!--<p><%= title_plain %></p>-->
+
+<h1><%= title %></h1>
+<%= content %>
+
+<!--<p><%= excerpt %></p>-->
+<p>Date: <%= date %></p>
+<!--<p><%= modified %></p>-->
+
+  <% if (categories.length > 0) { %>
+    <p class="categories">
+    Posted in: 
+      <% for (key in categories) { %>
+        <%= categories[key].title %>
+      <% } %>
+    </p>
+  <% } %>
+
+  <% if (tags.length > 0) { %>
+    <p class="tags">
+    Tagged: 
+      <% for (key in tags) { %>
+        <%= tags[key].title %>, 
+      <% } %>
+    </p>
+  <% } %>
+<!--
+  <% if (author.nickname.length > 0) { %>
+    <p><%= author.nickname %></p>
+  <% } %>
+-->
+  <% if (comment_status == "open") { %>
+        <a href="#">You can post a comment</a>
+  <% } %>
+
+<p><%= attachments %></p>
+<p>Comments: <%= comment_count %></p>
+<p><%= comments %></p>
+<!--<p><%= custom_fields %></p>-->
+</div>

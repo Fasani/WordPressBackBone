@@ -1,0 +1,30 @@
+<div id="excerpt-<%= id %>">
+      <h1><%= title_plain %></h1>
+      <%= excerpt %>
+      <p>Date: <%= date %></p>
+      <div class="meta">
+        <% if (categories.length > 0) { %>
+          <span class="categories">
+            <% for (key in categories) { %>
+              <%= categories[key].title %>
+            <% } %>
+          </span>
+        <% } %>
+        
+        <% if (tags.length > 0) { %>
+          <span class="tags">
+            <% for (key in tags) { %>
+              <%= tags[key].title %><% if (key != (tags.length-1)) { %>,<% } %>
+            <% } %>
+          </span>
+        <% } %>
+<!--
+        <% if (author.name.length > 0) { %>
+          <span class="author"><%= author.name %></span>
+        <% } %>
+-->
+        <% if (comment_count > 0) { %>
+          <span class="comments"><%= comment_count %></span>
+        <% } %>
+      </div>
+    </div>

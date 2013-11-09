@@ -8,7 +8,7 @@ define([
   //App Files
   'app/Dispatcher',
   //Templates
-  'text!app/templates/template.html'
+  'text!app/templates/single-post.html'
 ], function($, _, Backbone, Rainbow, Dispatcher, templateHTML){
 
   var PostSingleView = Backbone.View.extend({
@@ -16,7 +16,7 @@ define([
 	el: '#content',
 	className: 'single-post',
 
-	template: _.template($('#single-post').html()),
+	template: _.template(templateHTML),
 
   render: function() {
     this.$el.html(this.template(this.collection.models[0].attributes));

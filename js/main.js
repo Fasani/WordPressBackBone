@@ -17,6 +17,12 @@ require.config({
         'rainbow'
       ]
     },
+    javascript: {
+      deps: [
+        'rainbow'
+      ],
+      exports: 'javascript'
+    },
     rainbow: {
       exports: 'Rainbow'  
     } 
@@ -28,8 +34,8 @@ require.config({
       text: 'libs/text',
       rainbow: 'libs/rainbow.min',
       generic: 'libs/language/generic',
-      rainbowJavaScript: 'libs/language/javascript',
-      rainbowLineNumbers: 'libs/rainbow.linenumbers.min'
+      javascript: 'libs/language/javascript'//,
+      //rainbowLineNumbers: 'libs/rainbow.linenumbers.min'
   }
 });
 

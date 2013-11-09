@@ -75,18 +75,17 @@
 
         <% if (tags.length > 0) { %>
           <p class="tags">
-          Posted in: 
+          Tagged: 
             <% for (key in tags) { %>
               <%= tags[key].title %>, 
             <% } %>
           </p>
         <% } %>
-
+<!--
         <% if (author.nickname.length > 0) { %>
           <p><%= author.nickname %></p>
         <% } %>
-
-
+-->
         <% if (comment_status == "open") { %>
               <a href="#">You can post a comment</a>
         <% } %>
@@ -105,8 +104,7 @@
   <script type="text/javascript"  src="js/libs/rainbow.min.js"></script>
   <script type="text/javascript"  src="js/libs/language/generic.js"></script>
   <script type="text/javascript"  src="js/libs/language/javascript.js"></script>
-
-<script type="text/javascript"  src="js/libs/rainbow.linenumbers.min.js"></script>
+  <script type="text/javascript"  src="js/libs/rainbow.linenumbers.min.js"></script>
 
   <script type="text/javascript" src="js/models/postItem.js"></script>
   <script type="text/javascript" src="js/collections/postList.js"></script>

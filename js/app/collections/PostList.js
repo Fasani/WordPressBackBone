@@ -1,4 +1,14 @@
-var PostList = Backbone.Collection.extend({
+'use strict';
+
+define([
+  'jquery',
+  'underscore',
+  'backbone',
+  //App Files
+  'app/models/PostItem'
+], function($, _, Backbone, PostItem){
+
+  var PostList = Backbone.Collection.extend({
 
   model: PostItem,
   url: 'http://blog.michaelfasani.com/api/get_posts/',
@@ -51,5 +61,9 @@ var PostList = Backbone.Collection.extend({
 
     return parsed;
   }
+
+});
+
+  return PostList;
 
 });

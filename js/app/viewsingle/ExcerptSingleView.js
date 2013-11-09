@@ -1,3 +1,15 @@
+'use strict';
+
+define([
+  'jquery',
+  'underscore',
+  'backbone',
+  //App Files
+  'app/Dispatcher',
+  //Templates
+  'text!app/templates/template.html'
+], function($, _, Backbone, Dispatcher, templateHTML){
+
 var ExcerptSingleView = Backbone.View.extend({
 
 	tagName: 'li',
@@ -15,7 +27,11 @@ var ExcerptSingleView = Backbone.View.extend({
 	},
 
   changePage: function() {
-    this.options.dispatcher.trigger('changePage', this.model);
+    Dispatcher.trigger('changePage', this.model);
   }
+
+});
+
+  return ExcerptSingleView;
 
 });

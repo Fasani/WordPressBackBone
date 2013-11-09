@@ -1,3 +1,14 @@
+'use strict';
+
+define([
+  'jquery',
+  'underscore',
+  'backbone',
+  //App Files
+  'app/Dispatcher',
+  'app/viewsingle/ExcerptSingleView',
+], function($, _, Backbone, Dispatcher, ExcerptSingleView){
+
 var ExcerptListView = Backbone.View.extend({
 
 	el: '#post-list',
@@ -16,9 +27,13 @@ var ExcerptListView = Backbone.View.extend({
 	addOne: function(singleExcerpt) {
 		var view = new ExcerptSingleView({
 			model: singleExcerpt.attributes,
-      dispatcher: this.options.dispatcher
+      dispatcher: Dispatcher
 		});
 		this.$el.append(view.render().el);
 	}
+
+});
+
+  return ExcerptListView;
 
 });

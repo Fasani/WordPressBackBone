@@ -1,4 +1,17 @@
-var PostSingleView = Backbone.View.extend({
+'use strict';
+
+define([
+  'jquery',
+  'underscore',
+  'backbone',
+  'rainbow',
+  //App Files
+  'app/Dispatcher',
+  //Templates
+  'text!app/templates/template.html'
+], function($, _, Backbone, Rainbow, Dispatcher, templateHTML){
+
+  var PostSingleView = Backbone.View.extend({
 
 	el: '#content',
 	className: 'single-post',
@@ -14,11 +27,15 @@ var PostSingleView = Backbone.View.extend({
 
   initialize: function() {
     this.listenTo(this.collection, 'sync', this.render);
-    this.listenTo(this.options.dispatcher, 'changePage', this.changePage);
+    this.listenTo(Dispatcher, 'changePage', this.changePage);
   },
 
   changePage: function(model) {
     this.$el.html(this.template(model));
     return this;
   }
+});
+
+  return PostSingleView;
+
 });

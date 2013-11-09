@@ -11,31 +11,13 @@ require.config({
         'jquery'
       ],
       exports: 'Backbone'
-    },
-    generic: {
-      deps: [
-        'rainbow'
-      ]
-    },
-    javascript: {
-      deps: [
-        'rainbow'
-      ],
-      exports: 'javascript'
-    },
-    rainbow: {
-      exports: 'Rainbow'  
-    } 
+    }
   },
   paths: {
       jquery: 'libs/jquery-2.0.3.min',
       underscore: 'libs/underscore-min',
       backbone: 'libs/backbone-min',
-      text: 'libs/text',
-      rainbow: 'libs/rainbow.min',
-      generic: 'libs/language/generic',
-      javascript: 'libs/language/javascript'//,
-      //rainbowLineNumbers: 'libs/rainbow.linenumbers.min'
+      text: 'libs/text'
   }
 });
 

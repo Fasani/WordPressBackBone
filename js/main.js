@@ -17,7 +17,9 @@ require.config({
       jquery: 'libs/jquery-2.0.3.min',
       underscore: 'libs/underscore-min',
       backbone: 'libs/backbone-min',
-      text: 'libs/text'
+      text: 'libs/text',
+      //jQuery Plugins
+      dateformat: 'libs/jquery.dateFormat-1.0'
   }
 });
 

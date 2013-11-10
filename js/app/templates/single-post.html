@@ -5,11 +5,18 @@
 <!--<p><%= status %></p>-->
 <!--<p><%= title_plain %></p>-->
 
-<h1><%= title %></h1>
+<h1 class="title"><%= title %></h1>
+<p class="date">
+  <span class="day"><%= dateDay %></span>
+  <span class="month-year"><%= dateMonthYear %></span>
+</p>
+<p class="comment-count">
+  <span class="count"><%= comment_count %></span>
+  <span class="comment"><% if (comment_count == 1) { %>Comment <% } else {%> Comments <% } %></span>
+</p>
 <%= content %>
 
 <!--<p><%= excerpt %></p>-->
-<p>Date: <%= date %></p>
 <!--<p><%= modified %></p>-->
 
   <% if (categories.length > 0) { %>
@@ -39,7 +46,6 @@
   <% } %>
 
 <p><%= attachments %></p>
-<p>Comments: <%= comment_count %></p>
 <p><%= comments %></p>
 <!--<p><%= custom_fields %></p>-->
 </div>

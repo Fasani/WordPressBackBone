@@ -5,8 +5,9 @@ define([
   'underscore',
   'backbone',
   //App Files
+  'dateformat',
   'app/models/PostItem'
-], function($, _, Backbone, PostItem){
+], function($, _, Backbone, dateFormat, PostItem){
 
   var PostList = Backbone.Collection.extend({
 
@@ -19,7 +20,7 @@ define([
       var id = this.id;
       var type = this.type;
       var slug = this.slug;
-      var url = this.url;
+      var url = this.url; 
       var status = this.status;
       var title = this.title;
       var title_plain = this.title_plain;
@@ -46,7 +47,10 @@ define([
         title_plain: title_plain,
         content: content,
         excerpt: excerpt,
-        date: date,
+        date: $.format.date(date, 'dd/MM/yyyy hh:mm:ss'),
+        dateDay: $.format.date(date, 'dd'),
+        dateMonthYear: $.format.date(date, 'MMM yy'),
+        prettyDate: $.format.prettyDate(date),
         modified: modified,
         categories: categories,
         tags: tags,

@@ -25,7 +25,7 @@ h1 {
   font-size: 26px;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -53,12 +53,12 @@ p {
 
 #post-list h1 {
   font-size: 14px;
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 
 #post-list p {
-  margin-bottom: 5px;
-  font-size: 12px;
+  margin-bottom: 10px;
+  font-size: 11px;
 }
 
 #post-list .single-excerpt {
@@ -75,7 +75,7 @@ p {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  padding-left: 23px;
+  cursor: pointer;
 }
 
 #post-list .single-excerpt.active {
@@ -91,15 +91,8 @@ p {
 }
 
 #post-list .single-excerpt .date {
-  position: absolute;
-  top: 110px;
-  left: -111px;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(-90deg);
   font-size: 10px;
-  background: black;
-  padding: 5px 140px 5px 18px;
-  color: #fff;
+  font-weight: bold;
 }
 
 #post-list .meta {
@@ -147,6 +140,49 @@ p {
   -webkit-border-radius: 2px;
   -moz-border-radius:    2px;
   border-radius:         2px;
+  position: relative;
+}
+
+#content .title {
+  width: 460px;
+  line-height: 1.2em;
+}
+
+#content .date,
+#content .comment-count {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 10px 0 7px;
+  margin: 0;
+  background: black;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  width: 60px;
+  line-height: 1.4em;
+  font-weight: normal;
+  -webkit-border-radius: 0 0 2px 2px;
+  -moz-border-radius:    0 0 2px 2px;
+  border-radius:         0 0 2px 2px;
+}
+
+#content .comment-count {
+  right: 90px;
+}
+
+#content .date .day,
+#content .comment-count .count {
+  font-size: 26px;
+  display: block;
+  text-align: center;
+}
+
+#content .date .month-year,
+#content .comment-count .comment {
+  font-size: 10px;
+  display: block;
+  text-align: center;
 }
 
 #content pre {

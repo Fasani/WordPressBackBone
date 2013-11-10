@@ -5,11 +5,12 @@ define([
   'underscore',
   'backbone',
   //App Files
+  'app/AppRouter',
   'app/models/PostItem',
   'app/collections/PostList',
   'app/views/ExcerptListView',
   'app/viewsingle/PostSingleView'
-], function($, _, Backbone, PostItem, PostList, ExcerptListView, PostSingleView){
+], function($, _, Backbone, AppRouter, PostItem, PostList, ExcerptListView, PostSingleView){
 
 var MainView = Backbone.View.extend({
 

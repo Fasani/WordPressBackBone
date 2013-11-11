@@ -16,6 +16,8 @@ define([
 
   parse: function (data) {
     var parsed = [];
+    var self = this;
+
     $(data.posts).each(function () {
       var id = this.id;
       var type = this.type;
@@ -43,7 +45,7 @@ define([
         slug: slug,
         url: url,
         status: status,
-        title: title,
+        title: self.removeWidow(title),
         title_plain: title_plain,
         content: content,
         excerpt: excerpt,
@@ -64,6 +66,19 @@ define([
     });
 
     return parsed;
+  },
+
+  removeWidow: function (title) {
+    var wordArray = title.split(" "),
+        newTitle = "";
+
+    if (wordArray.length > 1) {
+      wordArray[wordArray.length - 2] += "&nbsp;" + wordArray[wordArray.length - 1];
+      wordArray.pop();
+      newTitle = wordArray.join(" ");
+    }
+
+    return newTitle;
   }
 
 });

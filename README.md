@@ -6,4 +6,4 @@ http://wordpress.org/plugins/json-api/
 
 This is a work in progress.
 
-Building a front end for my wordpress blog.
+Building a custom front end for my personal wordpress blog.

@@ -1,0 +1,223 @@
+/* Colors */
+// $color-highlight: #000;
+// $color-link: #000;
+// $shadows: 0px 0px 10px rgba(50, 50, 50, 0.75);
+// $radius: 2px;
+// $radius2: 0 0 2px 2px;
+
+/* Shadow */
+.shadows {
+  // -webkit-box-shadow: $shadows;
+  // -moz-box-shadow: $shadows;
+  // box-shadow: $shadows;
+}
+
+/* Panels */
+.panel-background {
+  background-color: rgba(255,255,255,0.90);
+}
+
+/* Rounded Corners */
+.rounded-corners-all4 {
+  // -webkit-border-radius: $radius;
+  // -moz-border-radius: $radius;
+  // -ms-border-radius: $radius;
+  // -o-border-radius: $radius;
+  // border-radius: $radius;
+}
+
+.rounded-corners-bottom2 {
+  // -webkit-border-radius: $radius2;
+  // -moz-border-radius: $radius2;
+  // -ms-border-radius: $radius2;
+  // -o-border-radius: $radius2;
+  // border-radius: $radius2;
+}
+
+/* Main CSS */
+* {
+	border: 0;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Tahoma;
+  background: url(http://farm7.staticflickr.com/6119/6209426978_f1390ca327_b.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#main {
+	overflow: hidden;
+	padding: 20px;
+  //color: $color-link;
+;
+}
+
+h1 {
+  font-size: 26px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+a {
+  //color: $color-link;
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+#post-list {
+  float: left;
+  width: 300px;
+  list-style: none;
+  line-height: 1em;
+
+  h1 {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+
+  .single-excerpt {
+    margin-bottom: 20px;
+    padding-right: 9px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: #fff;
+    //border: 1px solid $color-highlight;
+    //.panel-background;
+    //.rounded-corners-all4;
+    //.shadows;
+
+    a {
+      text-decoration: none;
+      font-weight: normal;
+      padding: 16px 20px;
+      display: block;
+    }
+
+    .date {
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+  }
+
+  .single-excerpt.active {
+    padding-right: 0;
+    //border-right: 10px solid $color-highlight;
+  }
+
+  .meta {
+    overflow: hidden;
+    margin-top: 5px;
+
+    span {
+      padding-left: 20px;
+      margin-right: 10px;
+      height: 16px;
+      font-size: 10px;
+      float: left;
+      padding-top: 2px;
+    }
+
+    span.categories {background: url(../img/categories.png) no-repeat top left;}
+    span.author {background: url(../img/author.png) no-repeat top left;}
+    span.comments {background: url(../img/comment.png) no-repeat top left;}
+    span.tags {background: url(../img/tags.png) no-repeat top left;}
+
+  }
+
+}
+
+#content {
+  float: left;
+  padding: 20px;
+  margin-left: 20px;
+  width: 600px;
+  font-size: 14px;
+  line-height: 1.5em;
+  position: relative;
+  //border: 1px solid $color-highlight;
+  //.rounded-corners-all4;
+  //.panel-background;
+  background: #fff;
+  //.shadows;
+
+  .title {
+    width: 460px;
+    line-height: 1.2em;
+  }
+
+  .date,
+  .comment-count {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    padding: 10px 0 7px;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    width: 60px;
+    line-height: 1.4em;
+    font-weight: normal;
+    //.rounded-corners-bottom2;
+    //background: $color-highlight;
+  }
+
+  .comment-count {
+    right: 90px;
+  }
+
+  .date .day,
+  .comment-count .count {
+    font-size: 26px;
+    display: block;
+    text-align: center;
+  }
+
+  .date .month-year,
+  .comment-count .comment {
+    font-size: 10px;
+    display: block;
+    text-align: center;
+  }
+
+  pre {
+    padding: 2px;
+    font-size: 12px;
+    line-height: 1.5em;
+    //.shadows;
+  }
+
+}
+
+code {
+  background: #272822;
+  color: #fff;
+  margin: 0 2px;
+}

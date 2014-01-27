@@ -4,10 +4,10 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'moment',
   //App Files
-  'dateformat',
   'app/models/PostItem'
-], function($, _, Backbone, dateFormat, PostItem){
+], function($, _, Backbone, moment, PostItem){
 
   var PostList = Backbone.Collection.extend({
 
@@ -49,10 +49,9 @@ define([
         title_plain: title_plain,
         content: content,
         excerpt: excerpt,
-        date: $.format.date(date, 'dd/MM/yyyy hh:mm:ss'),
-        dateDay: $.format.date(date, 'dd'),
-        dateMonthYear: $.format.date(date, 'MMM yy'),
-        prettyDate: $.format.prettyDate(date),
+        dateDay: moment(date).format('DD'),
+        dateMonthYear: moment(date).format('MMM') + " " + moment(date).format('YYYY'),
+        dateTimeAgo: moment(date).fromNow(),
         modified: modified,
         categories: categories,
         tags: tags,

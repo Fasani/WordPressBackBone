@@ -19,7 +19,7 @@ require.config({
       backbone: 'libs/backbone-min',
       text: 'libs/text',
       //jQuery Plugins
-      dateformat: 'libs/jquery.dateFormat-1.0'
+      moment: 'libs/moment.min'
   }
 });
 

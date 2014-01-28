@@ -14,10 +14,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: Tahoma;
-  background: url(http://farm7.staticflickr.com/6119/6209426978_f1390ca327_b.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url(http://farm9.staticflickr.com/8214/8282896429_ba42212986_o.jpg) no-repeat center center fixed;
   background-size: cover; }
 
 #main {
@@ -65,13 +62,7 @@ p {
     background: #fff;
     border: 1px solid #000;
     background-color: rgba(255, 255, 255, 0.9);
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
     border-radius: 2px;
-    -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
     box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75); }
     #post-list .single-excerpt a {
       text-decoration: none;
@@ -112,14 +103,8 @@ p {
   line-height: 1.5em;
   position: relative;
   border: 1px solid #000;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.9);
-  -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75); }
   #content .title {
     width: 460px;
@@ -136,10 +121,6 @@ p {
     width: 60px;
     line-height: 1.4em;
     font-weight: normal;
-    -webkit-border-radius: 0 0 2px 2px;
-    -moz-border-radius: 0 0 2px 2px;
-    -ms-border-radius: 0 0 2px 2px;
-    -o-border-radius: 0 0 2px 2px;
     border-radius: 0 0 2px 2px;
     background: #000; }
   #content .comment-count {
@@ -156,9 +137,10 @@ p {
     padding: 2px;
     font-size: 12px;
     line-height: 1.5em;
-    -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+    overflow-x: auto;
     box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75); }
+  #content pre code {
+    white-space: pre; }
 
 #aside {
   float: left;
@@ -169,14 +151,8 @@ p {
   line-height: 1.5em;
   position: relative;
   border: 1px solid #000;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.9);
-  -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75); }
   #aside .title {
     width: 300px;
@@ -188,4 +164,5 @@ p {
 code {
   background: #272822;
   color: #fff;
-  margin: 0 2px; }
+  margin: 0 2px;
+  overflow-x: scroll; }

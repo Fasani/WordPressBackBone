@@ -17,6 +17,7 @@ var MainView = Backbone.View.extend({
 	el: '#main',
 
 	initialize: function() {
+
 		this.render();
 	},
 

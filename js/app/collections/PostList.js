@@ -7,12 +7,18 @@ define([
   'moment',
   //App Files
   'app/models/PostItem'
-], function($, _, Backbone, moment, PostItem){
+], function($, _, Backbone, moment, PostItem) {
 
   var PostList = Backbone.Collection.extend({
 
   model: PostItem,
+  
   url: 'http://blog.michaelfasani.com/api/get_posts/',
+
+  sync: function(method, model, options){   
+    options.dataType = "jsonp";  
+    return Backbone.sync(method, model, options);  
+  },
 
   parse: function (data) {
     var parsed = [];

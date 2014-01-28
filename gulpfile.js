@@ -65,9 +65,9 @@ gulp.task('default', function(){
     gulp.run('sass');
     gulp.run('requirejsBuild');
 
-    // gulp.watch('./js/*.js', function(){
-    //     gulp.run('lint', 'scripts');
-    // });
+    gulp.watch('./js/app/**/*.js', function(){
+        gulp.run('requirejsBuild');
+    });
 
     gulp.watch('./scss/*.scss', function(){
         gulp.run('sass');

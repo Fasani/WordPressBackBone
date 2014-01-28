@@ -7,8 +7,6 @@ $radius2: 0 0 2px 2px;
 
 /* Shadow */
 @mixin shadows($shadows) {
-  -webkit-box-shadow: $shadows;
-  -moz-box-shadow: $shadows;
   box-shadow: $shadows;
 }
 
@@ -24,18 +22,10 @@ $radius2: 0 0 2px 2px;
 
 /* Rounded Corners */
 @mixin rounded-corners-all4($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  -o-border-radius: $radius;
   border-radius: $radius;
 }
 
 @mixin rounded-corners-bottom2($radius2) {
-  -webkit-border-radius: $radius2;
-  -moz-border-radius: $radius2;
-  -ms-border-radius: $radius2;
-  -o-border-radius: $radius2;
   border-radius: $radius2;
 }
 
@@ -51,10 +41,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: Tahoma;
-  background: url(http://farm7.staticflickr.com/6119/6209426978_f1390ca327_b.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url(http://farm9.staticflickr.com/8214/8282896429_ba42212986_o.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -214,7 +201,12 @@ p {
     padding: 2px;
     font-size: 12px;
     line-height: 1.5em;
+    overflow-x: auto;
     @include shadows($shadows);
+  }
+
+  pre code {
+    white-space: pre;
   }
 
 }
@@ -238,7 +230,7 @@ p {
   }
 
   p {
-    
+
   }
 
   ul {
@@ -252,4 +244,5 @@ code {
   background: #272822;
   color: #fff;
   margin: 0 2px;
+  overflow-x: scroll;
 }

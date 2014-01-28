@@ -49,6 +49,8 @@ html, body {
 	overflow: hidden;
 	padding: 20px;
   color: $color-link;
+  margin: 0 auto;
+  width: 1240px;
 }
 
 h1 {
@@ -215,7 +217,7 @@ p {
   float: left;
   padding: 20px;
   margin-left: 20px;
-  width: 280px;
+  width: 210px;
   font-size: 14px;
   line-height: 1.5em;
   position: relative;

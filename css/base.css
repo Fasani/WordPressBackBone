@@ -20,7 +20,9 @@ html, body {
 #main {
   overflow: hidden;
   padding: 20px;
-  color: #000; }
+  color: #000;
+  margin: 0 auto;
+  width: 1240px; }
 
 h1 {
   font-size: 26px;
@@ -146,7 +148,7 @@ p {
   float: left;
   padding: 20px;
   margin-left: 20px;
-  width: 280px;
+  width: 210px;
   font-size: 14px;
   line-height: 1.5em;
   position: relative;

@@ -1,5 +1,6 @@
 /* Colors */
 /* Shadow */
+/* Border */
 /* Panels */
 /* Rounded Corners */
 /* Main CSS */
@@ -158,6 +159,31 @@ p {
     -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
     box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75); }
+
+#aside {
+  float: left;
+  padding: 20px;
+  margin-left: 20px;
+  width: 280px;
+  font-size: 14px;
+  line-height: 1.5em;
+  position: relative;
+  border: 1px solid #000;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75); }
+  #aside .title {
+    width: 300px;
+    line-height: 1.2em; }
+  #aside ul {
+    list-style: inside;
+    margin-bottom: 20px; }
 
 code {
   background: #272822;

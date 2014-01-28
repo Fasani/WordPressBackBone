@@ -6,8 +6,8 @@
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <!--<link rel="stylesheet" href="css/rainbowlinenumbers.css">-->
   <link rel="stylesheet" href="css/rainbow/themes/monokai.css">
-  <link rel="stylesheet" type="text/css" href="css/base.css" />
 
+  <!-- This needs to be moved to require.js -->
   <script type="text/javascript" src="js/libs/rainbow.min.js"></script>
   <script type="text/javascript" src="js/libs/language/generic.js"></script>
   <script type="text/javascript" src="js/libs/language/javascript.js"></script>
@@ -16,6 +16,7 @@
   <script type="text/javascript" src="js/libs/language/html.js"></script>
   <!--<script type="text/javascript" src="js/libs/rainbow.linenumbers.min.js"></script>-->
 
+  <link rel="stylesheet" type="text/css" href="css/base.css" />
   <script type="text/javascript" src="js/require.js" data-main="dist/main.min"></script>
 
 </head>
@@ -24,6 +25,31 @@
   <div id="main">
     <ul id="post-list"></ul>
     <div id="content"></div>
+    <div id="aside">
+      <h2 class="title">About my site...</h2>
+      <p>A work in conistant progress, my personal playground! This where I play with new technologies, the backend is hosted in Word Press for future proofing but this current front end is built using the following technology stack:</p>
+
+      <ul>
+        <li>WordPress</li>
+        <li>WordPress JSON API</li>
+        <li>Gulp for Task Running</li>
+        <li>Require for AMD</li>
+        <li>Backbone for MV*</li>
+        <li>Underscore for Utils</li>
+        <li>jQuery for Awesomeness</li>
+        <li>Moment for Dates</li>
+        <li>Rainbow for Code Highlighting</li>
+        <li>SASS for CSS</li>
+      </ul>
+
+      <p>This project can be found on my <a href="https://github.com/Fasani/WordPressBackBone">github!</a></p>
+
+      <h2 class="title">About Me</h2>
+      <p>I am a London based Frontend Web Developer and I've been doing this a long time, I like to play with new technology and frameworks and much of that learning ends up here.</p>
+
+      <p>You can find me on <a href="http://www.twitter.com/michaelfasani">Twitter!</a></p>
+
+    </div>
   </div>
 
 </body>

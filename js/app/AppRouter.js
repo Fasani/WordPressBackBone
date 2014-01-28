@@ -1,13 +1,13 @@
-'use strict';
-
 define([
   'jquery',
   'underscore',
   'backbone',
 ], function($, _, Backbone){
 
+  'use strict';
+
   var AppRouter = Backbone.Router.extend({
-    
+
     routes: {
         '': 'index',
         'posts/:id': 'getPost',
@@ -17,7 +17,7 @@ define([
   });
 
   // Instantiate the router
-  var app_router = new AppRouter;
+  var app_router = new AppRouter();
 
   app_router.on('route:index', function (id) {
       //alert( "index");

@@ -1,27 +1,32 @@
-var gulp = require('gulp'); 
+var gulp = require('gulp'),
+    jshint = require('gulp-jshint'),
+    sass   = require('gulp-sass'),
+    rjs = require('gulp-requirejs'),
+    jsApppDir = './js/app/**/*.js',
+    sassApppDir = './scss/*.scss';
 
-var jshint = require('gulp-jshint');
-var sass   = require('gulp-sass');
-var rjs = require('gulp-requirejs');
+gulp.task('lint', function() {
 
+    gulp.src(jsApppDir)
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'));
 
-//var concat = require('gulp-concat');
-//var uglify = require('gulp-uglify');
-//var rename = require('gulp-rename');
+    gulp.src('./js/app/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'));
 
-// gulp.task('lint', function() {
-//     gulp.src('./js/*.js')
-//         .pipe(jshint())
-//         .pipe(jshint.reporter('default'));
-// });
+});
 
 gulp.task('sass', function() {
-    gulp.src('./scss/*.scss')
+
+    gulp.src(sassApppDir)
         .pipe(sass())
         .pipe(gulp.dest('css'));
+
 });
 
 gulp.task('requirejsBuild', function() {
+
     rjs({
         shim: {
           underscore: {
@@ -49,27 +54,20 @@ gulp.task('requirejsBuild', function() {
     })
 
     .pipe(gulp.dest('./dist')); // pipe it to the output DIR
+
 });
 
-// gulp.task('scripts', function() {
-//     gulp.src('./js/app/*.js')
-//         .pipe(concat('all.js'))
-//         .pipe(gulp.dest('./js/dist'))
-//         .pipe(rename('all.min.js'))
-//         .pipe(uglify())
-//         .pipe(gulp.dest('./js/dist'));
-// });
+//Defualt Task, check the files and start the watching.
+gulp.task('default', function() {
 
-gulp.task('default', function(){
-    //gulp.run('lint', 'sass', 'scripts');
-    gulp.run('sass');
-    gulp.run('requirejsBuild');
+    gulp.run('sass', 'lint', 'requirejsBuild');
 
-    gulp.watch('./js/app/**/*.js', function(){
-        gulp.run('requirejsBuild');
-    });
-
-    gulp.watch('./scss/*.scss', function(){
+    gulp.watch(sassApppDir, function() {
         gulp.run('sass');
     });
+
+    gulp.watch(jsApppDir, function() {
+        gulp.run('lint', 'requirejsBuild');
+    });
+
 });

@@ -1,5 +1,3 @@
-'use strict';
-
 define([
   'jquery',
   'underscore',
@@ -8,6 +6,8 @@ define([
   'app/Dispatcher',
   'app/viewsingle/ExcerptSingleView',
 ], function($, _, Backbone, Dispatcher, ExcerptSingleView){
+
+'use strict';
 
 var ExcerptListView = Backbone.View.extend({
 

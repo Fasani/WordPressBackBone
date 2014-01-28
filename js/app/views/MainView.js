@@ -1,5 +1,3 @@
-'use strict';
-
 define([
   'jquery',
   'underscore',
@@ -12,6 +10,8 @@ define([
   'app/viewsingle/PostSingleView'
 ], function($, _, Backbone, AppRouter, PostItem, PostList, ExcerptListView, PostSingleView){
 
+  'use strict';
+  
 var MainView = Backbone.View.extend({
 
 	el: '#main',

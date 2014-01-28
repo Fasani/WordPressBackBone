@@ -1,5 +1,3 @@
-'use strict';
-
 define([
   'jquery',
   'underscore',
@@ -11,13 +9,16 @@ define([
   'text!app/templates/single-post.html'
 ], function($, _, Backbone, Dispatcher, templateHTML){
 
+  'use strict';
+
+  
   var PostSingleView = Backbone.View.extend({
 
-  	el: '#content',
+    el: '#content',
 
-  	className: 'single-post',
+    className: 'single-post',
 
-  	template: _.template(templateHTML),
+    template: _.template(templateHTML),
 
     initialize: function() {
       this.listenTo(this.collection, 'sync', this.render);

@@ -1,5 +1,3 @@
-'use strict';
-
 define([
   'jquery',
   'underscore',
@@ -8,6 +6,8 @@ define([
   //App Files
   'app/models/PostItem'
 ], function($, _, Backbone, moment, PostItem) {
+
+'use strict';
 
   var PostList = Backbone.Collection.extend({
 

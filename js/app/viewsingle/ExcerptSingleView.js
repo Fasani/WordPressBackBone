@@ -1,5 +1,3 @@
-'use strict';
-
 define([
   'jquery',
   'underscore',
@@ -10,7 +8,9 @@ define([
   'text!app/templates/single-excerpt.html'
 ], function($, _, Backbone, Dispatcher, templateHTML){
 
-var ExcerptSingleView = Backbone.View.extend({
+  'use strict';
+
+  var ExcerptSingleView = Backbone.View.extend({
 
 	tagName: 'li',
 	className: 'single-excerpt',

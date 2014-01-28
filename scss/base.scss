@@ -1,37 +1,37 @@
 /* Colors */
-// $color-highlight: #000;
-// $color-link: #000;
-// $shadows: 0px 0px 10px rgba(50, 50, 50, 0.75);
-// $radius: 2px;
-// $radius2: 0 0 2px 2px;
+$color-highlight: #000;
+$color-link: #000;
+$shadows: 0px 0px 10px rgba(50, 50, 50, 0.75);
+$radius: 2px;
+$radius2: 0 0 2px 2px;
 
 /* Shadow */
-.shadows {
-  // -webkit-box-shadow: $shadows;
-  // -moz-box-shadow: $shadows;
-  // box-shadow: $shadows;
+@mixin shadows($shadows) {
+  -webkit-box-shadow: $shadows;
+  -moz-box-shadow: $shadows;
+  box-shadow: $shadows;
 }
 
 /* Panels */
-.panel-background {
+@mixin panel-background {
   background-color: rgba(255,255,255,0.90);
 }
 
 /* Rounded Corners */
-.rounded-corners-all4 {
-  // -webkit-border-radius: $radius;
-  // -moz-border-radius: $radius;
-  // -ms-border-radius: $radius;
-  // -o-border-radius: $radius;
-  // border-radius: $radius;
+@mixin rounded-corners-all4($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
 }
 
-.rounded-corners-bottom2 {
-  // -webkit-border-radius: $radius2;
-  // -moz-border-radius: $radius2;
-  // -ms-border-radius: $radius2;
-  // -o-border-radius: $radius2;
-  // border-radius: $radius2;
+@mixin rounded-corners-bottom2($radius2) {
+  -webkit-border-radius: $radius2;
+  -moz-border-radius: $radius2;
+  -ms-border-radius: $radius2;
+  -o-border-radius: $radius2;
+  border-radius: $radius2;
 }
 
 /* Main CSS */
@@ -56,8 +56,7 @@ html, body {
 #main {
 	overflow: hidden;
 	padding: 20px;
-  //color: $color-link;
-;
+  color: $color-link;
 }
 
 h1 {
@@ -75,7 +74,7 @@ h2 {
 }
 
 a {
-  //color: $color-link;
+  color: $color-link;
   font-weight: bold;
 }
 
@@ -107,10 +106,10 @@ p {
     overflow: hidden;
     cursor: pointer;
     background: #fff;
-    //border: 1px solid $color-highlight;
-    //.panel-background;
-    //.rounded-corners-all4;
-    //.shadows;
+    border: 1px solid $color-highlight;
+    @include panel-background;
+    @include rounded-corners-all4($radius);
+    @include shadows($shadows);
 
     a {
       text-decoration: none;
@@ -128,7 +127,7 @@ p {
 
   .single-excerpt.active {
     padding-right: 0;
-    //border-right: 10px solid $color-highlight;
+    border-right: 10px solid $color-highlight;
   }
 
   .meta {
@@ -161,11 +160,10 @@ p {
   font-size: 14px;
   line-height: 1.5em;
   position: relative;
-  //border: 1px solid $color-highlight;
-  //.rounded-corners-all4;
-  //.panel-background;
-  background: #fff;
-  //.shadows;
+  border: 1px solid $color-highlight;
+  @include rounded-corners-all4($radius);
+  @include panel-background;
+  @include shadows($shadows);
 
   .title {
     width: 460px;
@@ -185,8 +183,8 @@ p {
     width: 60px;
     line-height: 1.4em;
     font-weight: normal;
-    //.rounded-corners-bottom2;
-    //background: $color-highlight;
+    @include rounded-corners-bottom2($radius2);
+    background: $color-highlight;
   }
 
   .comment-count {
@@ -211,7 +209,7 @@ p {
     padding: 2px;
     font-size: 12px;
     line-height: 1.5em;
-    //.shadows;
+    @include shadows($shadows);
   }
 
 }

@@ -1,13 +1,7 @@
 /* Colors */
 /* Shadow */
-
 /* Panels */
-.panel-background {
-  background-color: rgba(255, 255, 255, 0.9); }
-
 /* Rounded Corners */
-
-
 /* Main CSS */
 * {
   border: 0;
@@ -27,7 +21,8 @@ html, body {
 
 #main {
   overflow: hidden;
-  padding: 20px; }
+  padding: 20px;
+  color: #000; }
 
 h1 {
   font-size: 26px;
@@ -42,6 +37,7 @@ h2 {
   margin-bottom: 5px; }
 
 a {
+  color: #000;
   font-weight: bold; }
 
 p {
@@ -65,7 +61,17 @@ p {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    background: #fff; }
+    background: #fff;
+    border: 1px solid #000;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75); }
     #post-list .single-excerpt a {
       text-decoration: none;
       font-weight: normal;
@@ -75,7 +81,8 @@ p {
       font-size: 10px;
       font-weight: bold; }
   #post-list .single-excerpt.active {
-    padding-right: 0; }
+    padding-right: 0;
+    border-right: 10px solid #000; }
   #post-list .meta {
     overflow: hidden;
     margin-top: 5px; }
@@ -103,7 +110,16 @@ p {
   font-size: 14px;
   line-height: 1.5em;
   position: relative;
-  background: #fff; }
+  border: 1px solid #000;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75); }
   #content .title {
     width: 460px;
     line-height: 1.2em; }
@@ -118,7 +134,13 @@ p {
     font-family: 'Oswald', sans-serif;
     width: 60px;
     line-height: 1.4em;
-    font-weight: normal; }
+    font-weight: normal;
+    -webkit-border-radius: 0 0 2px 2px;
+    -moz-border-radius: 0 0 2px 2px;
+    -ms-border-radius: 0 0 2px 2px;
+    -o-border-radius: 0 0 2px 2px;
+    border-radius: 0 0 2px 2px;
+    background: #000; }
   #content .comment-count {
     right: 90px; }
   #content .date .day, #content .comment-count .count {
@@ -132,7 +154,10 @@ p {
   #content pre {
     padding: 2px;
     font-size: 12px;
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75); }
 
 code {
   background: #272822;

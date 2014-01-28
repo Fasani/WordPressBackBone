@@ -10,7 +10,6 @@ define([
 ], function($, _, Backbone, Dispatcher, templateHTML){
 
   'use strict';
-
   
   var PostSingleView = Backbone.View.extend({
 

@@ -2,16 +2,12 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     sass   = require('gulp-sass'),
     rjs = require('gulp-requirejs'),
-    jsApppDir = './js/app/**/*.js',
+    jsApppDir = ['./js/app/*.js', './js/app/**/*.js'],
     sassApppDir = './scss/*.scss';
 
 gulp.task('lint', function() {
 
     gulp.src(jsApppDir)
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
-
-    gulp.src('./js/app/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 

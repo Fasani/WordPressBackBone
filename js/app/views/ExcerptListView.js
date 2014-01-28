@@ -9,6 +9,7 @@ define([
 
 'use strict';
 
+
 var ExcerptListView = Backbone.View.extend({
 
 	el: '#post-list',
